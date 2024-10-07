@@ -68,9 +68,9 @@ _Light Mode_
 ### Following (Mobile)
 
 <div><i>Dark Mode</i></div>
-<div></div>
+<div> </div>
 <img src="./postack_Images/Mobile_Following_DarkMode.png" alt="drawing" width="200"/>
-<div></div>
+<div> </div>
 <div><i>Light Mode</i></div>
 
 <img src="./postack_Images/Mobile_Following_LightMode.png" alt="drawing" width="200"/>
