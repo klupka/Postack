@@ -70,9 +70,9 @@ _Light Mode_
 <div><i>Dark Mode</i></div>
 <br>
 <img src="./postack_Images/Mobile_Following_DarkMode.png" alt="drawing" width="200"/>
-<br>
-<div><i>Light Mode</i></div>
 
+<div><i>Light Mode</i></div>
+<br>
 <img src="./postack_Images/Mobile_Following_LightMode.png" alt="drawing" width="200"/>
 
 ### Post
