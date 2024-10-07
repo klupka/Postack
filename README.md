@@ -36,6 +36,7 @@
     -   Liking and Disliking posts.
     -   Commenting on posts.
     -   Replying to comments.
+-   Search Posts: Users can search for specific posts to quickly find content of interest.
 -   Delete Posts, Comments, and Replies: Users can delete their own posts, comments, and replies.
 
 ### Post Management
@@ -83,8 +84,8 @@ _Light Mode_
         <td><i>Light Mode</i></td>
     </tr>
     <tr>
-        <td><img src="./postack_Images/Mobile_Following_DarkMode.png" alt="drawing"/></td>
-        <td><img src="./postack_Images/Mobile_Following_LightMode.png" alt="drawing"/></td>
+        <td><img src="./postack_Images/Mobile_Following_DarkMode.png" alt="Mobile_Following_DarkMode"/></td>
+        <td><img src="./postack_Images/Mobile_Following_LightMode.png" alt="Mobile_Following_LightMode"/></td>
     </tr>
 </table>
 
@@ -120,6 +121,20 @@ _Light Mode_
 -   CORS
 -   Express Async Handler
 -   Express Session
+
+### Database Schema Structure
+
+The database schema for **Postack** is designed to support a seamless user experience within the forum application. It consists of the following key components:
+
+-   **Users**: This table stores user information, including unique usernames, authentication data, and user preferences, such as profile customization and dark mode settings. Each user can follow and be followed by others.
+
+-   **Forum Posts**: This table holds the essential content of the application. Each post includes a title, content, and the author's username. Users can like or dislike posts, and timestamps track when each post was created and updated.
+
+-   **Comments**: Each forum post can have multiple comments, allowing users to engage in discussions. Comments are associated with specific posts and include the content, author, and interaction data (likes and dislikes).
+
+-   **Replies**: The replies table allows users to respond to comments, encouraging detailed discussions. Each reply is linked to its parent comment, maintaining the context of discussions.
+
+![Schema Diagram](./postack_Images/SchemaDiagram.png)
 
 ## License
 
