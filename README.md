@@ -57,11 +57,19 @@ This project is a forum application built using the MERN stack, allowing users t
 
 ### Home
 
-![Home Page](./postack_Images/Home_DarkAndLightMode.png)
+Dark Mode
+![Home Page](./postack_Images/Home_DarkMode.png)
+
+Light Mode
+![Home Page](./postack_Images/Home_LightMode.png)
 
 ### Following (Mobile)
 
-<img src="./postack_Images/Mobile_Following_LightAndDarkMode.png" alt="drawing" width="200"/>
+Dark Mode
+<img src="./postack_Images/Mobile_Following_DarkMode.png" alt="drawing" width="200"/>
+
+Light Mode
+<img src="./postack_Images/Mobile_Following_LightMode.png" alt="drawing" width="200"/>
 
 ### Post
 
