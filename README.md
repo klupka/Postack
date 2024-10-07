@@ -56,7 +56,8 @@ This project is a forum application built using the MERN stack, allowing users t
 ## Screenshots
 
 ![Home Page](./postack_Images/Home_DarkAndLightMode.png)
-![Following Page on Mobile](./postack_Images/Mobile_Following_LightAndDarkMode.png)
+<img src="./postack_Images/Mobile_Following_LightAndDarkMode.png" alt="drawing" width="200"/>
+
 ![Post Page](./postack_Images/PostDetails_DarkMode.png)
 ![Profile Page](./postack_Images/Profile_Followers.png)
 ![Profile Customization](./postack_Images/Edit_Profile.png)
