@@ -1,10 +1,26 @@
 # Postack
 
-## Description
+**Postack** is a forum application built on the MERN stack, drawing inspiration from various social media platforms, with Reddit as its primary influence. Leveraging MongoDB for data storage, Express and Node.js for the backend, and React for a seamless user experience, it allows users to share posts, comment, and reply in structured, thread-based discussions.
 
-This project is a forum application built using the MERN stack, allowing users to share, post, comment, and reply on threads.
+## Table of Contents
 
----
+-   [Features](#features)
+    -   [User Management](#user-management)
+    -   [Content Interaction](#content-interaction)
+    -   [Post Management](#post-management)
+    -   [Additional Features](#additional-features)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [Screenshots](#screenshots)
+    -   [Home](#home)
+    -   [Following (Mobile)](#following-mobile)
+    -   [Post](#post)
+    -   [Profile](#profile)
+    -   [Profile Customization](#profile-customization)
+-   [Technologies](#technologies)
+    -   [Frontend](#frontend)
+    -   [Backend](#backend)
+-   [License](#license)
 
 ## Features
 
@@ -30,8 +46,6 @@ This project is a forum application built using the MERN stack, allowing users t
 
 -   Dark Mode: Supports a dark theme for better viewing comfort.
 
----
-
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/username/postack.git`
@@ -43,15 +57,11 @@ This project is a forum application built using the MERN stack, allowing users t
 7. Run the backend: `npm run dev`
 8. Visit localhost in browser: `http://localhost:5173/`
 
----
-
 ## Usage
 
 1. Create an account or log in.
 2. Create a new post or join an existing post discussion.
 3. Like, dislike, comment, or reply on comments in posts.
-
----
 
 ## Screenshots
 
@@ -67,13 +77,16 @@ _Light Mode_
 
 ### Following (Mobile)
 
-<div><i>Dark Mode</i></div>
-<br>
-<img src="./postack_Images/Mobile_Following_DarkMode.png" alt="drawing" width="200"/>
-
-<div><i>Light Mode</i></div>
-<br>
-<img src="./postack_Images/Mobile_Following_LightMode.png" alt="drawing" width="200"/>
+<table>
+    <tr>
+        <td><i>Dark Mode</i></td>
+        <td><i>Light Mode</i></td>
+    </tr>
+    <tr>
+        <td><img src="./postack_Images/Mobile_Following_DarkMode.png" alt="drawing"/></td>
+        <td><img src="./postack_Images/Mobile_Following_LightMode.png" alt="drawing"/></td>
+    </tr>
+</table>
 
 ### Post
 
@@ -86,8 +99,6 @@ _Light Mode_
 ### Profile Customization
 
 ![Profile Customization](./postack_Images/Edit_Profile.png)
-
----
 
 ## Technologies
 
@@ -109,8 +120,6 @@ _Light Mode_
 -   CORS
 -   Express Async Handler
 -   Express Session
-
----
 
 ## License
 
