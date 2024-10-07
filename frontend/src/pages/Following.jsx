@@ -134,9 +134,8 @@ const Following = ({
     // retrieves forum posts from endpoint and sorts them based on current sort value
     // posts are filtered to show only following posts
     const getForumPosts = async (currentSortOptionFollowing) => {
-        const getPostsURL = "http://localhost:8000/forum-posts";
         try {
-            const res = await axios.get(getPostsURL);
+            const res = await axios.get(`${baseURL}/forum-posts`);
             let postsTemp = res.data;
             let posts = [];
             if (userData.following.length > 0) {

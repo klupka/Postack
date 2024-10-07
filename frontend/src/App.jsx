@@ -17,7 +17,7 @@ import MobileNavigation from "./components/MobileNavigation.jsx";
 
 function App() {
     // backend URL
-    const baseURL = "http://localhost:8000";
+    const baseURL = "https://postack.onrender.com";
     // frontend URL base
     const baseURLFrontend = "http://localhost:5173";
     // check user authentication endpoint URL

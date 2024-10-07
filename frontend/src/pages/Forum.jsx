@@ -127,10 +127,8 @@ const Forum = ({
 
     // retrieves forum posts from endpoint and sorts them based on current sort value
     const getForumPosts = async (currentSortOption) => {
-        const getPostsURL = "http://localhost:8000/forum-posts";
-
         try {
-            const res = await axios.get(getPostsURL);
+            const res = await axios.get(`${baseURL}/forum-posts`);
             let posts = res.data;
             // Used to sort Top and Bottom
             let likesAndIndexArray = [];
