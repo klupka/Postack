@@ -93,10 +93,6 @@ const Profile = ({
                 withCredentials: true,
             })
             .then((res) => {
-                console.log(
-                    "/profile, Authenticated as user:",
-                    res.data.user.username
-                );
                 setUserData(res.data.user);
                 getUserPosts();
                 getSavedPosts(res.data.user.username);

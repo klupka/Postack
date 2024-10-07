@@ -87,7 +87,6 @@ const User = ({ setAuthUserData, authUserData }) => {
             .get(`${baseURL}/forum-posts/saved-posts/${username}`)
             .then((res) => {
                 setSavedPosts(res.data);
-                console.log("savedPosts", res.data);
             })
             .catch((err) => {
                 console.log("Failed to fetch saved posts", err);
@@ -103,7 +102,6 @@ const User = ({ setAuthUserData, authUserData }) => {
                     setUserData(res.data[0]);
                     setUserExists(true);
                     getSavedPosts(res.data[0].username);
-                    console.log("users", res.data[0].username);
                 } else if (res.data.length === 0) {
                     setUserExists(false);
                 }
@@ -136,14 +134,10 @@ const User = ({ setAuthUserData, authUserData }) => {
             .get(checkAuthURL, { withCredentials: true })
             .then((res) => {
                 if (res.data.user.username === username) {
-                    console.log(
-                        `${res.data.user.username} === ${username} !! redirecting!`
-                    );
                     navigate("/profile");
                 }
                 setIsAuthChecked(true);
                 setAuthUserData(res.data.user);
-                console.log("User authenticated");
                 setProcessingFollowRequest(false);
             })
             .catch((err) => {
@@ -271,7 +265,7 @@ const User = ({ setAuthUserData, authUserData }) => {
             })
             .catch((err) => {
                 if (err.status === 403) {
-                    console.log("Attempting to unfollow");
+                    console.log("Unfollowing..");
                     axios
                         .patch(
                             unfollowUserURL,
@@ -851,7 +845,6 @@ const User = ({ setAuthUserData, authUserData }) => {
                                         processingFollowRequest ? true : false
                                     }
                                     onClick={() => {
-                                        console.log(authUserData);
                                         if (
                                             authUserData.length === 0 &&
                                             isAuthChecked

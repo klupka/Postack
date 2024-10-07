@@ -139,10 +139,6 @@ const PostDetails = ({
         axios
             .get(checkAuthURL, { withCredentials: true })
             .then((res) => {
-                console.log(
-                    "/postDetails, Authenticated as user:",
-                    res.data.user.username
-                );
                 setUserData(res.data.user);
                 setNewComment({
                     ...newComment,
