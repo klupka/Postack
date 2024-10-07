@@ -21,7 +21,6 @@
     -   [Post](#post)
     -   [Profile](#profile)
     -   [Profile Customization](#profile-customization)
--   [License](#license)
 
 ## Features
 
@@ -136,7 +135,3 @@ _Light Mode_
 ### Profile Customization
 
 ![Profile Customization](./postack_Images/Edit_Profile.png)
-
-## License
-
-This project is licensed under the MIT License.
