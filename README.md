@@ -97,7 +97,7 @@ The database schema for **Postack**, built on MongoDB, is designed to support a 
 
 -   **Replies**: The replies table allows users to respond to comments, encouraging detailed discussions. Each reply is linked to its parent comment, maintaining the context of discussions.
 
-![Schema Diagram](./postack_Images/SchemaDiagram.png)
+![Schema Diagram](./postack_images/SchemaDiagram.png)
 
 ## Screenshots
 
@@ -105,11 +105,11 @@ The database schema for **Postack**, built on MongoDB, is designed to support a 
 
 _Dark Mode_
 
-![Home Page](./postack_Images/Home_DarkMode.png)
+![Home Page](./postack_images/Home_DarkMode.png)
 
 _Light Mode_
 
-![Home Page](./postack_Images/Home_LightMode.png)
+![Home Page](./postack_images/Home_LightMode.png)
 
 ### Following (Mobile)
 
@@ -119,19 +119,19 @@ _Light Mode_
         <td><i>Light Mode</i></td>
     </tr>
     <tr>
-        <td><img src="./postack_Images/Mobile_Following_DarkMode.png" alt="Mobile_Following_DarkMode"/></td>
-        <td><img src="./postack_Images/Mobile_Following_LightMode.png" alt="Mobile_Following_LightMode"/></td>
+        <td><img src="./postack_images/Mobile_Following_DarkMode.png" alt="Mobile_Following_DarkMode"/></td>
+        <td><img src="./postack_images/Mobile_Following_LightMode.png" alt="Mobile_Following_LightMode"/></td>
     </tr>
 </table>
 
 ### Post
 
-![Post Page](./postack_Images/PostDetails_DarkMode.png)
+![Post Page](./postack_images/PostDetails_DarkMode.png)
 
 ### Profile
 
-![Profile Page](./postack_Images/Profile_Followers.png)
+![Profile Page](./postack_images/Profile_Followers.png)
 
 ### Profile Customization
 
-![Profile Customization](./postack_Images/Edit_Profile.png)
+![Profile Customization](./postack_images/Edit_Profile.png)
