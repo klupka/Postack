@@ -23,7 +23,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-    origin: "https://postack.onrender.com/", // frontend URL (local: http://localhost:5173/)
+    origin: "http://localhost:5173/", // frontend URL (local: http://localhost:5173/)
     credentials: true, // allows cookies to be sent
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
 };
@@ -45,7 +45,7 @@ const sessionStore = MongoStore.create({
 // app uses session storing and stores them into MongoDB via sessionStore variable
 app.use(
     session({
-        secret: process.env.SECRET,
+        secret: SECRET,
         saveUninitialized: false,
         resave: false,
         store: sessionStore,
