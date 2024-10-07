@@ -34,6 +34,8 @@ import { useNavigate } from "react-router-dom";
 const PostDetails = ({
     setGlobalNotificationMessages,
     globalNotificationMessages,
+    baseURL,
+    baseURLFrontend,
 }) => {
     // post id passed through URL params
     const { id } = useParams();
@@ -54,10 +56,6 @@ const PostDetails = ({
         content: "",
         author: "",
     });
-    // backend URL
-    const baseURL = "http://localhost:8000";
-    // frontend URL
-    const URLFrontEndBase = "http://localhost:5173";
     // useState hook to verify user authentication has been checked
     const [isAuthChecked, setIsAuthChecked] = useState(false);
     // useState hook to handle reply form visibility
@@ -391,7 +389,7 @@ const PostDetails = ({
     // copy link to a post, temporarily shows 'copied' instead of 'copy'
     const copyPostLink = (postId) => {
         navigator.clipboard.writeText(
-            `${URLFrontEndBase}/forum-post/${postId}`
+            `${baseURLFrontend}/forum-post/${postId}`
         );
         setPostLinkCopied(true);
         setTimeout(function () {

@@ -36,11 +36,9 @@ const Forum = ({
     globalNotificationMessages,
     userData,
     setUserData,
+    baseURL,
+    baseURLFrontend,
 }) => {
-    // frontend URL base for copying forum post links
-    const URLFrontEndBase = "http://localhost:5173";
-    // backend URL
-    const baseURL = "http://localhost:8000";
     // backend endpoint for user authentication
     const checkAuthURL = `${baseURL}/users/protected-route`;
     // useState hook to store forum posts
@@ -377,7 +375,7 @@ const Forum = ({
     // copy link to a post, temporarily shows 'copied' instead of 'copy'
     const copyPostLink = (postId) => {
         navigator.clipboard.writeText(
-            `${URLFrontEndBase}/forum-post/${postId}`
+            `${baseURLFrontend}/forum-post/${postId}`
         );
         setPostLinkCopied(true);
         setTimeout(function () {
@@ -2147,10 +2145,10 @@ const Forum = ({
                         globalNotificationMessages={globalNotificationMessages}
                         setDeletingUserPost={setDeletingUserPost}
                         setPostToDelete={setPostToDelete}
-                        baseURL={baseURL}
                         userData={userData}
                         showDeletePostWindow={showDeletePostWindow}
                         setShowDeletePostWindow={setShowDeletePostWindow}
+                        baseURL={baseURL}
                     />
                 ) : (
                     ""

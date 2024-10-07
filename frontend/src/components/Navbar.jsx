@@ -32,9 +32,8 @@ const Navbar = ({
     searchValue,
     userData,
     setUserData,
+    baseURL,
 }) => {
-    // backend URL
-    const baseURL = "http://localhost:8000";
     // navigation hook
     const navigate = useNavigate();
     // useState hook to handle user dropdown menu display

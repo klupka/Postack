@@ -7,9 +7,7 @@ import { faCompass } from "@fortawesome/free-solid-svg-icons";
 
 // Page: CreatePost
 // allows authenticated users to create forum posts
-const CreatePost = () => {
-    // backend URL
-    const baseURL = "http://localhost:8000";
+const CreatePost = ({ baseURL }) => {
     // backend endpoint URLs
     const checkAuthURL = `${baseURL}/users/protected-route`;
     const createPostURL = `${baseURL}/forum-posts/create-forum-post`;

@@ -8,9 +8,12 @@ import { faCompass } from "@fortawesome/free-solid-svg-icons";
 
 // Page: Login
 // users enter their credentials to be authenticated
-const Login = ({ setIsAuthenticated, setCurrentSortOption, setUserData }) => {
-    // backend URL
-    const baseURL = "http://localhost:8000";
+const Login = ({
+    setIsAuthenticated,
+    setCurrentSortOption,
+    setUserData,
+    baseURL,
+}) => {
     // login endpoint
     const loginUserURL = `${baseURL}/users/login`;
     // check authentication endpoint

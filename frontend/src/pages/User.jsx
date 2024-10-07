@@ -32,13 +32,9 @@ import { useNavigate } from "react-router-dom";
 
 // Page: User
 // users, authenticated or not, can view other users posts, saved posts, and view their followers/following
-const User = ({ setAuthUserData, authUserData }) => {
+const User = ({ setAuthUserData, authUserData, baseURL, baseURLFrontend }) => {
     // username passed through URL params
     const { username } = useParams();
-    // frontend URL
-    const URLFrontEndBase = "http://localhost:5173";
-    // backend URL
-    const baseURL = "http://localhost:8000";
     // check authentication endpoint URL
     const checkAuthURL = `${baseURL}/users/protected-route`;
     // useState hook to store user data
@@ -166,7 +162,7 @@ const User = ({ setAuthUserData, authUserData }) => {
     // copy link to user profile, temporarily shows 'copied' instead of 'copy'
     const copyProfileLink = () => {
         navigator.clipboard.writeText(
-            `${URLFrontEndBase}/user/${userData.username}`
+            `${baseURLFrontend}/user/${userData.username}`
         );
         setProfileLinkCopied(true);
         setTimeout(function () {

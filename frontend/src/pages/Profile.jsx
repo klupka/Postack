@@ -40,11 +40,9 @@ const Profile = ({
     setShowProfileCustomization,
     globalNotificationMessages,
     setGlobalNotificationMessages,
+    baseURL,
+    baseURLFrontend,
 }) => {
-    // frontend URL
-    const URLFrontEndBase = "http://localhost:5173";
-    // backend URL
-    const baseURL = "http://localhost:8000";
     // useState hook to store user data
     const [userData, setUserData] = useState(null);
     // useState hook to store user post data
@@ -127,7 +125,7 @@ const Profile = ({
     // copy link to user profile, temporarily shows 'copied' instead of 'copy'
     const copyProfileLink = () => {
         navigator.clipboard.writeText(
-            `${URLFrontEndBase}/user/${userData.username}`
+            `${baseURLFrontend}/user/${userData.username}`
         );
         setProfileLinkCopied(true);
         setTimeout(function () {

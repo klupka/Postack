@@ -16,9 +16,8 @@ const CustomizeProfile = ({
     showProfileCustomization,
     setShowProfileCustomization,
     userData,
+    baseURL,
 }) => {
-    // backend URL
-    const baseURL = "http://localhost:8000";
     // useState variable to store current user customization
     const [currentProfileCustomization, setCurrentProfileCustomization] =
         useState({

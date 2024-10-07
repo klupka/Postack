@@ -8,9 +8,7 @@ import { faCompass } from "@fortawesome/free-solid-svg-icons";
 
 // Page: Register
 // users can create an account by providing a unique username with a password
-const Register = () => {
-    // backend URL
-    const baseURL = "http://localhost:8000";
+const Register = ({ baseURL }) => {
     // register user endpoint URL
     const registerUserURL = `${baseURL}/users/register`;
     // useState hook to store the new user credentials

@@ -18,6 +18,8 @@ import MobileNavigation from "./components/MobileNavigation.jsx";
 function App() {
     // backend URL
     const baseURL = "http://localhost:8000";
+    // frontend URL base
+    const baseURLFrontend = "http://localhost:5173";
     // check user authentication endpoint URL
     const checkAuthURL = `${baseURL}/users/protected-route`;
     // useState hook to verify authentication state
@@ -152,6 +154,7 @@ function App() {
                         searchValue={searchValue}
                         userData={globalUserData}
                         setUserData={setGlobalUserData}
+                        baseURL={baseURL}
                     />
                 </div>
 
@@ -182,6 +185,8 @@ function App() {
                                         }
                                         userData={globalUserData}
                                         setUserData={setGlobalUserData}
+                                        baseURL={baseURL}
+                                        baseURLFrontend={baseURLFrontend}
                                     />
                                 </div>
                             }
@@ -205,6 +210,8 @@ function App() {
                                         }
                                         userData={globalUserData}
                                         setUserData={setGlobalUserData}
+                                        baseURL={baseURL}
+                                        baseURLFrontend={baseURLFrontend}
                                     />
                                 </div>
                             }
@@ -213,7 +220,7 @@ function App() {
                             path="/create-post"
                             element={
                                 <div>
-                                    <CreatePost />
+                                    <CreatePost baseURL={baseURL} />
                                 </div>
                             }
                         />
@@ -228,6 +235,8 @@ function App() {
                                         globalNotificationMessages={
                                             globalNotificationMessages
                                         }
+                                        baseURL={baseURL}
+                                        baseURLFrontend={baseURLFrontend}
                                     />
                                 </div>
                             }
@@ -242,6 +251,7 @@ function App() {
                                             setCurrentSortOption
                                         }
                                         setUserData={setGlobalUserData}
+                                        baseURL={baseURL}
                                     />
                                 </div>
                             }
@@ -250,7 +260,7 @@ function App() {
                             path="/register"
                             element={
                                 <div>
-                                    <Register />
+                                    <Register baseURL={baseURL} />
                                 </div>
                             }
                         />
@@ -272,6 +282,8 @@ function App() {
                                         setGlobalNotificationMessages={
                                             setGlobalNotificationMessages
                                         }
+                                        baseURL={baseURL}
+                                        baseURLFrontend={baseURLFrontend}
                                     />
                                 </div>
                             }
@@ -283,6 +295,8 @@ function App() {
                                     <User
                                         authUserData={globalUserData}
                                         setAuthUserData={setGlobalUserData}
+                                        baseURL={baseURL}
+                                        baseURLFrontend={baseURLFrontend}
                                     />
                                 </div>
                             }
