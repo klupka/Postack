@@ -23,7 +23,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-    origin: "https://postack-40rm.onrender.com/", // frontend URL (local: http://localhost:5173/)
+    origin: "https://postack-40rm.onrender.com", // frontend URL (local: http://localhost:5173/)
     credentials: true, // allows cookies to be sent
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
 };
@@ -52,7 +52,7 @@ app.use(
         cookie: {
             maxAge: 1000 * 60 * 60 * 24, // equals 1 day
             httpOnly: true,
-            secure: false, // Make sure your app is served over HTTPS
+            secure: true, // Make sure your app is served over HTTPS
             sameSite: "None", // required for cross-origin cookies
         },
     })
@@ -60,6 +60,8 @@ app.use(
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Credentials", "true");
+    console.log(`Request URL: ${req.url}, Session ID: ${req.session.id}`);
+
     next();
 });
 
