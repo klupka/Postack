@@ -26,6 +26,7 @@ const corsOptions = {
     origin: "https://postack-40rm.onrender.com", // frontend URL (local: http://localhost:5173/)
     credentials: true, // allows cookies to be sent
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    exposedHeaders: ["Set-Cookie"],
 };
 
 // middleware
