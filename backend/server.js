@@ -51,8 +51,8 @@ app.use(
         store: sessionStore,
         cookie: {
             maxAge: 1000 * 60 * 60 * 24, // equals 1 day
-            secure: true,
-            sameSite: "None", // Allow cross-origin cookies
+            secure: true, // set to true in production
+            sameSite: "None", // required for cross-origin cookies
         },
     })
 );
