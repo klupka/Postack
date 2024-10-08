@@ -50,10 +50,12 @@ app.use(
         saveUninitialized: false,
         resave: false,
         store: sessionStore,
+        proxy: true, // Required for Heroku & Digital Ocean (regarding X-Forwarded-For)
+        name: "MyCoolWebAppCookieName", // This needs to be unique per-host.
         cookie: {
             maxAge: 1000 * 60 * 60 * 24, // equals 1 day
             httpOnly: true,
-            secure: true, // Make sure your app is served over HTTPS
+            secure: true,
             sameSite: "none", // required for cross-origin cookies
             domain: "postack-40rm.onrender.com",
         },
@@ -66,6 +68,8 @@ app.use((req, res, next) => {
 
     next();
 });
+
+app.enable("trust proxy");
 
 // passport
 app.use(passport.initialize());
