@@ -19,7 +19,7 @@ function App() {
     // backend URL
     const baseURL = "https://postack.onrender.com";
     // frontend URL base
-    const baseURLFrontend = "http://localhost:5173";
+    const baseURLFrontend = "https://postack-40rm.onrender.com";
     // check user authentication endpoint URL
     const checkAuthURL = `${baseURL}/users/protected-route`;
     // useState hook to verify authentication state

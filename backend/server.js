@@ -23,7 +23,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-    origin: "http://localhost:5173/", // frontend URL (local: http://localhost:5173/)
+    origin: "https://postack-40rm.onrender.com/", // frontend URL (local: http://localhost:5173/)
     credentials: true, // allows cookies to be sent
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
 };
