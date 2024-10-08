@@ -52,6 +52,7 @@ app.use(
         cookie: {
             maxAge: 1000 * 60 * 60 * 24, // equals 1 day
             secure: true,
+            sameSite: "None", // Allow cross-origin cookies
         },
     })
 );
