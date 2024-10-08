@@ -51,7 +51,8 @@ app.use(
         store: sessionStore,
         cookie: {
             maxAge: 1000 * 60 * 60 * 24, // equals 1 day
-            secure: true, // set to true in production
+            httpOnly: true,
+            secure: true, // Make sure your app is served over HTTPS
             sameSite: "None", // required for cross-origin cookies
         },
     })
