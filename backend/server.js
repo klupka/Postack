@@ -53,7 +53,8 @@ app.use(
             maxAge: 1000 * 60 * 60 * 24, // equals 1 day
             httpOnly: true,
             secure: true, // Make sure your app is served over HTTPS
-            sameSite: "None", // required for cross-origin cookies
+            sameSite: "none", // required for cross-origin cookies
+            domain: "postack-40rm.onrender.com",
         },
     })
 );
