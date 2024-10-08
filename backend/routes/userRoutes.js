@@ -40,6 +40,7 @@ router.post("/login", (req, res, next) => {
                 .status(401)
                 .send({ success: false, message: "Authentication failed" });
         }
+        console.log("Session ID:", req.sessionID);
         req.logIn(user, (err) => {
             if (err) {
                 return next(err);
