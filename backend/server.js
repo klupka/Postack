@@ -57,6 +57,11 @@ app.use(
     })
 );
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Credentials", "true");
+    next();
+});
+
 // passport
 app.use(passport.initialize());
 app.use(passport.session());
