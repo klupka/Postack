@@ -2125,6 +2125,10 @@ const Forum = ({
                     icon={faCompass}
                     className="animate-windUpSpin text-[2.5rem] text-text"
                 />
+                <div className="mt-2">
+                    Loading... The server might need up to 50 seconds to spin
+                    back up from inactivity.
+                </div>
             </div>
         );
     }
