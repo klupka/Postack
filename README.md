@@ -9,7 +9,7 @@
     -   [Content Interaction](#content-interaction)
     -   [Post Management](#post-management)
     -   [Additional Features](#additional-features)
--   [Installation](#installation)
+-   [Installation for Local Development](#installation-for-local-development)
 -   [Usage](#usage)
 -   [Technologies](#technologies)
     -   [Frontend](#frontend)
@@ -47,16 +47,20 @@
 
 -   Dark Mode: Supports a dark theme for better viewing comfort.
 
-## Installation
+## Installation for Local Development
+
+If you'd like to run the application locally, follow the steps below. **Note:** You will need to configure certain settings (such as environment variables, authentication, and HTTPS) to make the app work properly in your local environment.
+
+### Steps:
 
 1. Clone the repository: `git clone https://github.com/username/postack.git`
 2. Navigate to the project directory: `cd postack`
 3. Install dependencies: `npm install`
-4. In one terminal navigate to frontend: `cd frontend`
-5. Run the frontend: `npm run dev`
-6. In the other terminal navigate to backend: `cd backend`
-7. Run the backend: `npm run dev`
-8. Visit localhost in browser: `http://localhost:5173/`
+4. Set up necessary environment variables and configurations for your local environment.
+5. Run the frontend and backend locally:
+    - Frontend: `cd frontend && npm run dev`
+    - Backend: `cd backend && npm run dev`
+6. Access the app in your browser at `http://localhost:5173/`
 
 ## Usage
 
