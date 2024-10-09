@@ -236,6 +236,7 @@ const PostDetails = ({
             commentId,
             id,
             setNewReply,
+            newReply,
             getComments,
             baseURL,
             addMessage
@@ -1553,6 +1554,7 @@ const onSubmitFunction = (
     commentId,
     id,
     setNewReply,
+    newReply,
     getComments,
     baseURL,
     addMessage
@@ -1562,7 +1564,7 @@ const onSubmitFunction = (
         .post(createReplyURL, replyData, {
             withCredentials: true,
         })
-        .then((res) => {
+        .then(() => {
             addMessage("Created reply successfully");
             // re-render comments to include the newly create comment
             getComments();
