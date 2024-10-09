@@ -202,10 +202,12 @@ const PostDetails = ({
                     author: newComment.author,
                 });
                 setExecutingOperation(false);
+                addMessage("Comment created successfully.");
             })
             .catch((err) => {
                 console.log(err);
                 setExecutingOperation(false);
+                addMessage("Could not create comment.");
             });
     };
 
@@ -235,7 +237,8 @@ const PostDetails = ({
             id,
             setNewReply,
             getComments,
-            baseURL
+            baseURL,
+            addMessage
         );
         setNewReply({
             commentId: "",
@@ -1551,7 +1554,8 @@ const onSubmitFunction = (
     id,
     setNewReply,
     getComments,
-    baseURL
+    baseURL,
+    addMessage
 ) => {
     const createReplyURL = `${baseURL}/comments/create-reply/${id}/${commentId}`;
     axios
@@ -1559,6 +1563,7 @@ const onSubmitFunction = (
             withCredentials: true,
         })
         .then((res) => {
+            addMessage("Created reply successfully");
             // re-render comments to include the newly create comment
             getComments();
             // reset input values to empty
@@ -1569,6 +1574,7 @@ const onSubmitFunction = (
         })
         .catch((err) => {
             console.log(err);
+            addMessage("Could not create reply.");
         });
 };
 
