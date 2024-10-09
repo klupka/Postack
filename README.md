@@ -1,5 +1,7 @@
 # Postack
 
+🔗 [Postack](https://postack-40rm.onrender.com/)
+
 **Postack** is a forum application built on the MERN stack, drawing inspiration from various social media platforms, with Reddit as its primary influence. Leveraging MongoDB for data storage, Express and Node.js for the backend, and React for a seamless user experience, it allows users to share posts, comment, and reply in structured, thread-based discussions.
 
 ## Table of Contents
@@ -66,7 +68,10 @@ If you'd like to run the application locally, follow the steps below. **Note:** 
 
 1. Create an account or log in.
 2. Create a new post or join an existing post discussion.
-3. Like, dislike, comment, or reply on comments in posts.
+3. Search for any posts.
+4. Follow other users and see their posts.
+5. The **Home** tab displays all posts, while the **Following** tab shows posts only from users you follow.
+6. Like, dislike, comment, or reply on comments in posts.
 
 ## Technologies
 
