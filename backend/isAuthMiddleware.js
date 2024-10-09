@@ -1,8 +1,9 @@
 // middleware used to check authentication for protected routes
 const isAuth = (req, res, next) => {
+    // debugging statements
     console.log("Checking authentication...");
     console.log("Is Authenticated:", req.isAuthenticated());
-    console.log("Session Data:", req.session); // Log session data
+    console.log("Session Data:", req.session);
 
     if (req.isAuthenticated()) {
         next();

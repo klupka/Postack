@@ -21,6 +21,7 @@ const MONGODB_CONNECT_STRING = process.env.MONGODB_CONNECT_STRING;
 // set up app using express
 const app = express();
 
+// enable trusting the first proxy in front of the app
 app.set("trust proxy", 1);
 
 // CORS configuration
@@ -52,8 +53,8 @@ app.use(
         saveUninitialized: false,
         resave: false,
         store: sessionStore,
-        proxy: true, // Required for Heroku & Digital Ocean (regarding X-Forwarded-For)
-        name: "MyCoolWebAppCookieName", // This needs to be unique per-host.
+        proxy: true,
+        name: "authSession",
         cookie: {
             maxAge: 1000 * 60 * 60 * 24, // equals 1 day
             httpOnly: true,
@@ -63,6 +64,7 @@ app.use(
     })
 );
 
+// enable CORS support for credentials and log the request URL and session ID for debugging purposes
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Credentials", "true");
     console.log(`Request URL: ${req.url}, Session ID: ${req.session.id}`);
