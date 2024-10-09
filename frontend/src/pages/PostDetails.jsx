@@ -229,7 +229,14 @@ const PostDetails = ({
             ),
             author: newReply.author,
         };
-        onSubmitFunction(replyContent, commentId, id, setNewReply, getComments);
+        onSubmitFunction(
+            replyContent,
+            commentId,
+            id,
+            setNewReply,
+            getComments,
+            baseURL
+        );
         setNewReply({
             commentId: "",
             content: "",
@@ -1543,7 +1550,8 @@ const onSubmitFunction = (
     commentId,
     id,
     setNewReply,
-    getComments
+    getComments,
+    baseURL
 ) => {
     const createReplyURL = `${baseURL}/comments/create-reply/${id}/${commentId}`;
     axios
