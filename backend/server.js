@@ -59,7 +59,6 @@ app.use(
             httpOnly: true,
             secure: true,
             sameSite: "none", // required for cross-origin cookies
-            domain: "postack-40rm.onrender.com",
         },
     })
 );
