@@ -820,6 +820,7 @@ const Profile = ({
                             setShowProfileCustomization
                         }
                         userData={userData}
+                        baseURL={baseURL}
                     />
                 </div>
 

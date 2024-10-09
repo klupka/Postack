@@ -1545,7 +1545,7 @@ const onSubmitFunction = (
     setNewReply,
     getComments
 ) => {
-    const createReplyURL = `http://localhost:8000/comments/create-reply/${id}/${commentId}`;
+    const createReplyURL = `${baseURL}/comments/create-reply/${id}/${commentId}`;
     axios
         .post(createReplyURL, replyData, {
             withCredentials: true,
