@@ -1289,11 +1289,20 @@ const Following = ({
     // if retrievedForumPosts and noFollowingPosts are still null, display loading animation
     if (retrievedForumPosts === null && noFollowingPosts === null) {
         return (
-            <div className="mx-auto w-full max-w-[1000px] px-auto text-wrap flex justify-center mt-10 animate-fadeInBounce">
-                <FontAwesomeIcon
-                    icon={faCompass}
-                    className="animate-windUpSpin text-[2.5rem] text-text"
-                />
+            <div className="mx-auto w-full max-w-[1000px] px-auto text-wrap flex flex-col items-center mt-10">
+                <div className="animate-fadeInBounce">
+                    <FontAwesomeIcon
+                        icon={faCompass}
+                        className="animate-windUpSpin text-[2.5rem] text-text"
+                    />
+                </div>
+                <div className="mt-5 italic text-placeholderText flex justify-center text-center px-10 text-sm">
+                    Just a moment...
+                </div>
+                <div className="mt-1 italic text-placeholderText flex justify-center text-center px-10 text-sm">
+                    The server could take up to 50 seconds to become active
+                    again.
+                </div>
             </div>
         );
     }

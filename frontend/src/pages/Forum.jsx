@@ -2128,7 +2128,10 @@ const Forum = ({
                     />
                 </div>
                 <div className="mt-5 italic text-placeholderText flex justify-center text-center px-10 text-sm">
-                    Just a moment... The server could take up to 50 seconds to
+                    Just a moment...
+                </div>
+                <div className="mt-1 italic text-placeholderText flex justify-center text-center px-10 text-sm">
+                    The server could take up to 50 seconds to
                     become active again.
                 </div>
             </div>

@@ -621,11 +621,20 @@ const PostDetails = ({
     // if post data is not found, display loading animation
     if (post.length === 0 || isAuthChecked === false || userData === "") {
         return (
-            <div className="px-auto text-wrap flex justify-center mt-10 animate-fadeInBounce w-full lg:max-w-[800px] lg:mx-auto sm:w-[calc(100%-60px)] sm:ml-[60px]">
-                <FontAwesomeIcon
-                    icon={faCompass}
-                    className="animate-windUpSpin text-[2.5rem] text-text"
-                />
+            <div className="mx-auto w-full max-w-[1000px] px-auto text-wrap flex flex-col items-center mt-10">
+                <div className="animate-fadeInBounce">
+                    <FontAwesomeIcon
+                        icon={faCompass}
+                        className="animate-windUpSpin text-[2.5rem] text-text"
+                    />
+                </div>
+                <div className="mt-5 italic text-placeholderText flex justify-center text-center px-10 text-sm">
+                    Just a moment...
+                </div>
+                <div className="mt-1 italic text-placeholderText flex justify-center text-center px-10 text-sm">
+                    The server could take up to 50 seconds to become active
+                    again.
+                </div>
             </div>
         );
     }
