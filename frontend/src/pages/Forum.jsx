@@ -2120,11 +2120,13 @@ const Forum = ({
     // if forum posts have not been retrieved, display loading animation
     if (retrievedForumPosts === null) {
         return (
-            <div className="mx-auto w-full max-w-[1000px] px-auto text-wrap flex justify-center mt-10 animate-fadeInBounce">
-                <FontAwesomeIcon
-                    icon={faCompass}
-                    className="animate-windUpSpin text-[2.5rem] text-text"
-                />
+            <div className="flex justify-center">
+                <div className="mx-auto w-full max-w-[1000px] px-auto text-wrap flex justify-center mt-10 animate-fadeInBounce">
+                    <FontAwesomeIcon
+                        icon={faCompass}
+                        className="animate-windUpSpin text-[2.5rem] text-text"
+                    />
+                </div>
                 <div className="mt-2">
                     Loading... The server might need up to 50 seconds to spin
                     back up from inactivity.
