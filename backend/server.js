@@ -21,6 +21,8 @@ const MONGODB_CONNECT_STRING = process.env.MONGODB_CONNECT_STRING;
 // set up app using express
 const app = express();
 
+app.set("trust proxy", 1);
+
 // CORS configuration
 const corsOptions = {
     origin: "https://postack-40rm.onrender.com", // frontend URL (local: http://localhost:5173/)
@@ -68,8 +70,6 @@ app.use((req, res, next) => {
 
     next();
 });
-
-app.enable("trust proxy");
 
 // passport
 app.use(passport.initialize());
