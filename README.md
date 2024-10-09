@@ -1,6 +1,6 @@
 # Postack
 
-🔗 [Postack](https://postack-40rm.onrender.com/)
+🔗 <a href="https://postack-40rm.onrender.com/" target="_blank" rel="noopener noreferrer">Postack</a>
 
 **Postack** is a forum application built on the MERN stack, drawing inspiration from various social media platforms, with Reddit as its primary influence. Leveraging MongoDB for data storage, Express and Node.js for the backend, and React for a seamless user experience, it allows users to share posts, comment, and reply in structured, thread-based discussions.
 
