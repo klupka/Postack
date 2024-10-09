@@ -2120,16 +2120,16 @@ const Forum = ({
     // if forum posts have not been retrieved, display loading animation
     if (retrievedForumPosts === null) {
         return (
-            <div className="mx-auto w-full max-w-[1000px] px-auto text-wrap flex justify-center">
-                <div className="mt-10 animate-fadeInBounce">
+            <div className="mx-auto w-full max-w-[1000px] px-auto text-wrap flex flex-col items-center mt-10">
+                <div className="animate-fadeInBounce">
                     <FontAwesomeIcon
                         icon={faCompass}
                         className="animate-windUpSpin text-[2.5rem] text-text"
                     />
                 </div>
-                <div className="mt-2">
-                    Loading... The server might need up to 50 seconds to spin
-                    back up from inactivity.
+                <div className="mt-5 italic text-placeholderText flex justify-center text-center px-10 text-sm">
+                    Just a moment... The server could take up to 50 seconds to
+                    become active again.
                 </div>
             </div>
         );
